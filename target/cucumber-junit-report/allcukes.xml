@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite failures="1" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="2" time="36.914173">
+<testcase classname="Register to a page" name="Positive Registration" time="24.457295">
+<system-out><![CDATA[Given I go to "mercuryUrl"..................................................passed
+And I click the "registration_Link" Element.................................passed
+And I enter "MD" in "firstname_inputBox"....................................passed
+And I enter "Rasul" in "lastname_inputBox"..................................passed
+And I enter "id" in "id_inputBox"...........................................passed
+And I enter "password" in "password_inputBox"...............................passed
+And I enter "Confirmpassword" in "Confirmpassword_inputBox".................passed
+And I click the "submit_Button" Element.....................................passed
+Then I validate "Register: Mercury Tours" Page Title........................passed
+And I validate Text "Dear MD Rasul," on "MercuryWellComeCusomer_Lavel"......passed
+]]></system-out>
+</testcase>
+<testcase classname="Register to a page" name="Positive Login" time="12.456878">
+<failure message="java.lang.AssertionError&#10;&#9;at org.junit.Assert.fail(Assert.java:86)&#10;&#9;at org.junit.Assert.assertTrue(Assert.java:41)&#10;&#9;at org.junit.Assert.assertTrue(Assert.java:52)&#10;&#9;at MyMaven.com.mycucumberproject.AllOtherSteps.i_validate_Text(AllOtherSteps.java:69)&#10;&#9;at ✽.And I validate Text &quot;Flight  Details&quot; on &quot;FlightDetails_Lavel&quot;(main/java/MyMaven/com/mycucumberproject/Mercuery.feature:27)&#10;"><![CDATA[Given I go to "mercuryUrl"..................................................passed
+And I enter "arhimel" in "userid_inputBox"..................................passed
+And I enter "mayaaa" in "User_password_inputBox"............................passed
+And I click the "login_Button" Element......................................passed
+Then I validate "Find a Flight: Mercury Tours:" Page Title..................passed
+And I validate Text "Flight  Details" on "FlightDetails_Lavel"..............failed
+
+StackTrace:
+java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertTrue(Assert.java:52)
+	at MyMaven.com.mycucumberproject.AllOtherSteps.i_validate_Text(AllOtherSteps.java:69)
+	at ✽.And I validate Text "Flight  Details" on "FlightDetails_Lavel"(main/java/MyMaven/com/mycucumberproject/Mercuery.feature:27)
+]]></failure>
+</testcase>
+</testsuite>
